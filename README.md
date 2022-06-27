@@ -17,8 +17,23 @@ In order to run the application you need to start a simple web server in Python.
 2. Start the simple webserver from the Anaconda command prompt: python -m http.server
 3. Open the application: http://localhost:8000/index.html
 
-## Summary  End Result
-* The web page loaded as shown in this image: 
-![UFo_Page](https://github.com/lykkelig/UFOs/blob/main/static/images/UFO_Web_Page.png)
-* You are able to change the selection criteria by changing a number of parameters: 
-![Selecion](https://github.com/lykkelig/UFOs/blob/main/static/images/UFO_Web_Page_Selection.png)
+**bold text** Deliverable 1 
+* The list element that creates the button is removed, and there are five list elements for filtering in the index.html file:
+![Filtering](https://github.com/lykkelig/UFOs/blob/main/static/images/UFO_Web_Page_Selection.png)
+
+* The event listener is modified to detect changes to each filter in the app.js file.
+*   	// 4a. Save the element that was changed as a variable.
+*   	let changedElement = d3.select(this);
+
+* The updateFilters() function saves the element, value, and the id of the filter that was changed:
+		See in app.js: function updateFilters() for complete code
+* The filterTable() function loops through all of the filters and keeps any data that matches the filter values.
+*italicized text*		See in app.js: function filterTable(obj) 
+
+* The webpage filters the table correctly based on user input: 
+![Filtering](https://github.com/lykkelig/UFOs/blob/main/static/images/Filter_Search.png)
+
+## Summary  (Deliverable 2) 
+* Drawback: There are no drop down elements to aid in the selection process.
+
+* The application is rather simple, it loads a table of UFO sightings that are located on the local host. A more robust application would use a database on a cloud platform that would keep the UFO sighting data updated. Although a simple application, it has it's uses allowing a user with no network or Internet connections to query UFO sightings with 5 different filters. 
